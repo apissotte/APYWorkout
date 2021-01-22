@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_exercise"
+    app:startDestination="@id/exerciseMasterFragment">
+
+    <fragment
+        android:id="@+id/exerciseMasterFragment"
+        android:name="com.apy.apyworkout.ui.exerciseMaster.ExerciseMasterFragment"
+        android:label="fragment_exercise_master"
+        tools:layout="@layout/fragment_exercise_master">
+        <action
+            android:id="@+id/action_exerciseMasterFragment_to_exerciseDetailFragment"
+            app:destination="@id/exerciseDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseDetailFragment"
+        android:name="com.apy.apyworkout.ui.exerciseDetail.ExerciseDetailFragment"
+        android:label="ExerciseDetailFragment"
+        tools:layout="@layout/fragment_exercise_detail">
+        <action
+            android:id="@+id/action_exerciseDetailFragment_to_exerciseMasterFragment"
+            app:destination="@id/exerciseMasterFragment" />
+    </fragment>
+</navigation>
